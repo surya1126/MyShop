@@ -8,7 +8,7 @@ using MyShop.Core.Models;
 
 namespace MyShop.DataAccess.InMemory
 {
-   public class ProductRepository
+    public class ProductRepository
     {
         ObjectCache cache = MemoryCache.Default;
         List<Product> products = new List<Product>();
@@ -25,7 +25,7 @@ namespace MyShop.DataAccess.InMemory
 
         public void Commit()
         {
-            cache["prodcts"] = products;
+            cache["products"] = products;
         }
 
         public void Insert(Product p)
